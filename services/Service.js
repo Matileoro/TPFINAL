@@ -1,5 +1,6 @@
 import Sonda from "../models/Sonda.js";
 import { validateSonda, validateId } from "../utils/validation.js"
+
 const sonda = new Sonda();
 
 class Service {
@@ -7,16 +8,16 @@ class Service {
     addSonda = (id, temperatura) => {
         const sonda = { id, temperatura };
         validateSonda(sonda);
-        return sonda.create(sonda);
+        return sonda.addSonda(sonda);
     };
     
     getAllSondas = () => {
-        return sonda.getAll();
+        return sonda.getAllSondas();
     };
     
     getSondaById = (id) => {
         validateId(id);
-        return sonda.getById(id);
+        return sonda.getSondaById(id);
     };
 };
 

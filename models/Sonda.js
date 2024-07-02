@@ -9,12 +9,12 @@ class Sonda {
         return this.sondas[this.sondas.length - 1];
     };
 
-    obtenerTodas = async () => {
+    getAllSondas = async () => {
         return this.sondas
     };
 
-    obtenerPorId = async (id) => {
-        return sondas.filter(ele => ele.id === id);
+    getSondaById = async (id) => {
+        return this.sondas.filter(ele => ele.id === id);
     };
 }
 
